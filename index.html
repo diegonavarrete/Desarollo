@@ -1,38 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ground Zero</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    
+    <!-- icon -->
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
+    <!-- cabecera -->
     <header>
-        <div class="contendor"> 
-            <h1>Ground Zero</h1>
+        <div class="contendor">
+            <h1>Ground Zero <img src="image/git.png" id="logo"></h1>
             <input type="checkbox" name="" id="menu-bar">
-            <label for="menu-bar">XX</label>
+            <label class="fa fa-bars" for="menu-bar"></label>
             <nav class="menu">
-                <a href="Home"></a>
-                <a href="Galeria"></a>
-                <a href="Formulario"></a>
-                <a href="Quienes Somos"></a>
+                <a href="index.html">Home</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="formulario.html">Formulario</a>
+                <a href="quienes.html">Quienes Somos</a>
+                <a href="login.html">Login</a>
             </nav>
         </div>
     </header>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+    <!-- contenido principal -->
     <main>
         <section id="banner">
 
+            <div class="slider">
+                <div> <img src="/image/slider1.jpg" alt=""></div>
+          
+                <div> <img src="/image/slider2.jpg" alt=""></div>
+     
+                <div> <img src="/image/slider3.jpg" alt=""></div>
+            </div>
+            <script>
+                $(document).ready(function () {
+                    $('.slider').bxSlider();
+                });
+            </script>
+        </section id="info">
+        <h1>Bienvenido a GroundZero</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit nulla numquam omnis, et iure
+            eos,
+            atque architecto repudiandae labore similique delectus, porro sit saepe minima. Inventore sunt ipsum rem?
+        </p>
 
-
-
-            
         </section>
+
 
 
 
     </main>
 
+    <!-- pie de pagina -->
 
+    <footer id="footer">
+        <h4>TODOS LOS DERECHOS SON RESERVADOS A DUOC 2021</h4>
+    </footer>
 </body>
+
 </html>
