@@ -201,8 +201,27 @@ label {
     height: 900px;
 }
 
-.fa fa-bars{
-    display: flex;
-    justify-content: end;
+.mapa{
+    margin-top: 7%;
+    padding:20px;
     
+}
+
+
+.textos{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    align-items: center;
+    margin-top: 20%;
+    margin-bottom: 30px;
+}
+.entero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.convert
+{
+    margin-top: 20%;
 }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="contendor">
+            <h1>Ground Zero <img src="image/git.png" id="logo"></h1>
+            <input type="checkbox" name="" id="menu-bar">
+            <label class="fa fa-bars" for="menu-bar"></label>
+            <nav class="menu">
+                <a href="index.html">Home</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="formulario.html">Contacto</a>
+                <a href="quienes.html">Quienes Somos</a>
+                <a href="login.html">Login</a>
+                <a href="registro.html">Registrarse</a>
+            </nav>
+        </div>
+    </header>
+
+    <form action="convertidor" class="convert">
+        <input type="text" name="pesos" placeholder="Cuantos USD Vale tu obra">
+        <hr>
+        <br>El total en pesos chilenos es: <input type="text" name="dolar">
+        <br>
+        <br><input type="button" value="Convertir" onclick="calcular();">
+        <h1 id="resultado"></h1>
+    </form>
+    <script>
+
+
+        function calcular() {
+            var pes = (document.convertidor.pesos.value) * 1;
+            var total = dolar1 * pes;
+            document.convertidor.dolar.value = total;
+        }
+
+
+    </script>
+
+    <input type="button" value="Recuperar viste" onclick="recupera1()">
+    <input type="text" name="monea">
+    <script>
+        function recupera1() {
+            var valor = prompt("Dime la contraseña", "");
+            var1 = valor * dolar1;
+            if (valor >= 0) {
+                alert(var1);
+            }else{
+                alert(valor * dolar1)
+            }
+        }
+    </script>
+
+
+    <section id="blog">
+        <input type="button" value="Recuperar Dolar" onclick="recupera()">
+        <div id="valor_dolar"></div>
+        <script>
+            function recupera() {
+
+                fetch("https://mindicador.cl/api/dolar")
+                    .then(
+                        function (response) {
+                            if (response.status != 200) {
+                                alert("no se pudo conecta con el servicio");
+                                return;
+                            }
+                            // recuperamos los datos desde la respuesta "response"
+                            response.json().then(function (data) {
+                                console.log(data);
+                                var dolar1 = data.serie[0].valor;
+                                document.getElementById('valor_dolar').innerHTML = dolar1;
+
+                            })
+                        }
+                    )
+
+            }
+
+
+
+        </script>
+
+</body>
+
+</html>

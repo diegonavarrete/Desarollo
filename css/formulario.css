@@ -1,0 +1,34 @@
+
+#pos {
+    background:nude;
+    font-family:  Helvetica;
+    padding: 25px;
+}
+
+.form-titulo{
+    background: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-bottom: solid 4px grey;
+}
+.form-registro{
+    width: 95%;
+    margin: auto;
+    max-width: 500px;
+    margin-top: 45px;
+    background: white;
+    border-radius: 15px;
+}
+.contenedor-imput{
+    display: flex;
+    padding: 10px 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+input{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
